@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Daftar Pelanggan</h1>
+    <p class="lead"></p>
+  </div>
+</div>
+<div class="container">
+    <div>
+        <a routerLink="/forms4"><button class="btn btn-info btn" style="float: right; margin-bottom: 10px;">Tambah <i class="fa fa-user-plus"></i></button></a>
+    </div>
+<table class="table">
+    <thead class="thead bg-info text-white">
+      <tr class="">
+        <th scope="col">No Kwh</th>
+        <th scope="col">Nama Pelanggan</th>
+        <th scope="col">Alamat</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="table.length">
+      <tr *ngFor="let article of table">
+        <th scope="row">{{ article.nomor_kwh }}</th>
+        <td>{{ article.nama_pelanggan }}</td>
+        <td>{{ article.alamat }}</td>
+      </tr>
+    </tbody>
+  </table>
+<div>
+</div>
+</div>

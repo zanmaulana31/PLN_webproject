@@ -1,0 +1,60 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Form Pembayaran</h1>
+    </div>
+  </div>
+<div class="container">
+    <form>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <input type="hidden" for="articletypeusr" class="form-control" #articleidtagihan value="1">
+              </div>
+              <div class="form-group">
+                <input type="hidden" for="articletypeusr" class="form-control" #articleidadmin value="1">
+              </div>
+            <div class="form-group col-md-6">
+                <label for="articleusernameteknisi">Tanggal Pembayaran</label>
+                <input type="text" class="form-control" #articletglbayar placeholder="" required>
+              </div>
+            
+              <div class="form-group col-md-6">
+                <label for="articletypeuser">Bulan Bayar</label>
+              <select class="form-control"  #articlebulanbayar>
+                <option>Januari</option>
+                <option>Februari</option>
+                <option>Maret</option>
+                <option>April</option>
+                <option>Mei</option>
+                <option>Juni</option>
+                <option>juli</option>
+                <option>Agustus</option>
+                <option>September</option>
+                <option>Oktober</option>
+                <option>November</option>
+                <option>Desember</option>
+              </select>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="articlenama_admin_teknisi">Biaya Admin</label>
+                <input type="text" class="form-control" #articlebiayaadmin placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label for="articlenama_admin_teknisi">Total Bayar</label>
+                <input type="text" class="form-control" #articletotalbayar placeholder="" required>
+              </div>
+
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+      </form>
+      <button type="button" class="btn btn-primary btn" (click)="add(articleidtagihan.value, articletglbayar.value, articlebulanbayar.value, articlebiayaadmin.value, articletotalbayar.value, articleidadmin.value); 
+      articleidtagihan.value=''; articletglbayar.value=''; articlebulanbayar.value=''; articlebiayaadmin.value=''; articletotalbayar.value=''; articleidadmin.value='';">Submit</button>
+      <div class="col mb-4"></div>
+    </div>
