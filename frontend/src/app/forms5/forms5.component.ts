@@ -21,7 +21,7 @@ export class Forms5Component implements OnInit{
       'type_user': articletypeusr
     
     };
-    this.articleservice.addadmin(this.table as any).subscribe(article=>{
+    this.articleservice.addteknisi(this.table as any).subscribe(article=>{
       this.table = article
     });
     console.log(this.table);
